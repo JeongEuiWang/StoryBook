@@ -1,44 +1,52 @@
-import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from './Button';
+import BasicButton from '../components/atom/button/BasicButton';
+import {ButtonSize, ButtonTheme} from "../components/atom/button/StyledButton";
+import {Meta, StoryObj} from "@storybook/react";
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+// 어떤 컴포넌트의 story인지, 어떤 설정으로 렌더링할지 정의
 const meta = {
-  title: 'Example/Button',
-  component: Button,
+  title: 'stories/Button',
+  component: BasicButton,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} satisfies Meta<typeof Button>;
+  
+} satisfies Meta<typeof BasicButton>;
 
-export default meta;
+// 기본 포맷을 정해두고 bind로 제어
 type Story = StoryObj<typeof meta>;
+export default meta;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
-  },
-};
+    theme: ButtonTheme.PRIMARY,
+    size: ButtonSize.MIDDLE,
+  }
+}
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
-};
+    theme: ButtonTheme.SECONDARY,
+    size: ButtonSize.MIDDLE,
+  }
+}
 
 export const Large: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
+    theme: ButtonTheme.PRIMARY,
+    size: ButtonSize.LARGE,
+  }
+}
+
+export const Middle: Story = {
+  args: {
+    theme: ButtonTheme.PRIMARY,
+    size: ButtonSize.MIDDLE,
+  }
+}
 
 export const Small: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+    theme: ButtonTheme.PRIMARY,
+    size: ButtonSize.SMALL,
+  }
+}
