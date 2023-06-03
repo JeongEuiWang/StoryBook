@@ -8,7 +8,7 @@ const meta = {
   title: 'stories/Button',
   component: BasicButton,
   tags: ['autodocs'],
-  
+
 } satisfies Meta<typeof BasicButton>;
 
 // 기본 포맷을 정해두고 bind로 제어
@@ -48,5 +48,12 @@ export const Small: Story = {
   args: {
     theme: ButtonTheme.PRIMARY,
     size: ButtonSize.SMALL,
+  }
+}
+
+export const Icon: Story = {
+  args: {
+    theme: ButtonTheme.MINOR,
+    size: ButtonSize.ICON,
   }
 }
