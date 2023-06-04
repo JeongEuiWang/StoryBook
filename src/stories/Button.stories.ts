@@ -15,7 +15,6 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 export default meta;
 
-
 export const Primary: Story = {
   args: {
     theme: ButtonTheme.PRIMARY,
