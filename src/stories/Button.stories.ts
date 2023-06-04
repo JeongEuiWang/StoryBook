@@ -11,7 +11,7 @@ const meta = {
 
 } satisfies Meta<typeof BasicButton>;
 
-// 기본 포맷을 정해두고 bind로 제어
+//아래 형태로 컴포넌트 story 렌더 가능
 type Story = StoryObj<typeof meta>;
 export default meta;
 
